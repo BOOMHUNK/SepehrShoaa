@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div class="main">
+  	<!-- <p class="logo">Music Player</p> -->
+    <div class="sideBar-wrapper">
+       <div class="sideBar-button">
+          <i class="fa fa-bars"></i>
+       </div>
+       <div class="sideBar-menu">
+          <ul>
+             
+             <li><a href="">Bekhand</a></li>
+             <li><a href="">Daram Ashegh Misham</a></li>
+             <li><a href="">Ghalbam Joonam</a></li>
+             <li><a href="">Gharghe Gerye</a></li>
+             <li><a href="">Sheyda</a></li>
+             <li><a href="">Moghaser</a></li>
+             <li><a href="">music</a></li>
+             <li><a href="">music</a></li>
+             <li><a href="">music</a></li>
+             <li><a href="">music</a></li>
+             <li><a href="">music</a></li>
+          </ul>
+       </div>
+    </div>
+    <!--- left part --->
+     <div class="left">
+        
+     
+      <!--- song img --->
+      <img id="track_image">
+         
+
+     </div>
+ 
+
+     <!--- right part --->
+  	 <div class="right">
+
+      <div class="sideShow">  
+      <div class="show_song_no">
+         <p id="present">1</p>
+         <p>/</p>
+         <p id="total">5</p>
+       </div>
+       
+          <p id="sideShow-title">title.mp3</p>
+          <p id="sideShow-artist">Artist name</p>
+      </div>
+       <!--- song title & artist name --->
+      <p id="title">title.mp3</p>
+      <p id="artist">Artist name</p>
+
+      <!--- middle part --->
+  	 	<div class="middle">
+            
+  	       <button onclick="previous_song()" id="pre"><img src="./img/pre.png"></button>
+      	   <button onclick="justplay()" id="play"><img src="./img/playyy.png"></button>
+            <button onclick="next_song()" id="next"><img src="./img/next.png"></button>
+            
+  	   </div>
+
+        <div class="volume">
+            <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+         </div>
+       <!--- song duration part --->
+        <div class="duration">
+           <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+        </div>
+        <button id="auto" onclick="autoplay_switch()"><img src="./img/auto.png"></button>
+  	</div>
+
+
+  </div>
+   
+  <!--- Add javascript file --->
+  <script src="script.js"></script>
+
+</body>
+</html>
